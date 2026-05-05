@@ -15,4 +15,3 @@ const getProductProp = <T, K extends keyof T>(obj: T, key: K) => {
 }
 
 console.log(getProductProp(product, "price"))
-console.log(getProductProp(product, "hi"))

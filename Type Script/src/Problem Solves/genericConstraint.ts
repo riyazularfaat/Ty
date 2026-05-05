@@ -15,4 +15,3 @@ const wordCount2 = {
 
 
 console.log(logLength(wordCount))
-console.log(logLength(wordCount2))
