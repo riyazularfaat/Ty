@@ -1,14 +1,13 @@
 type UserResponse = {
     info?: {
         address?: {
-            zipCode?: string;
+            zipCode?: string | null;
         }
     }
 };
 
-const getZipCode = (response: UserResponse) => {
-    const res = response.info?.address?.zipCode ?? "00000"
-    return res
+const getZipCode = (response: UserResponse): string => {
+    return response?.info?.address?.zipCode ?? "00000"
 }
 
 const zipcode: UserResponse = {
@@ -21,7 +20,7 @@ const zipcode: UserResponse = {
 const zipcode2: UserResponse = {
     info: {
         address: {
-            zipCode: ''
+            zipCode: null
         }
     }
 }

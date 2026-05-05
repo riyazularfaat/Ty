@@ -3,7 +3,7 @@ type JobDetails = { role: string; salary: number };
 
 type Employee = Person & JobDetails
 
-const getProfile = (person: Employee) => {
+const getProfile = (person: Employee):string => {
     const { name, role } = person;
     return `Name: ${name}, Role: ${role}`
 }
